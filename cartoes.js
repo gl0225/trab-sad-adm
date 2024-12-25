@@ -73,7 +73,7 @@ const cartoes = {
             ]
         },
         {
-            "imagem": "https://www.melhorescartoes.com.br/wp-content/uploads/2024/05/cartao-de-credito-para-negativado-nubank-265x166.png",
+            "imagem": "https://creditis.com.br/img/cartoes/cartao-nubank-ultravioleta-9.webp",
             "link": "https://nubank.com.br/pedir/nu/",
             "titulo": "Cartão Nubank",
             "renda_min": false,
