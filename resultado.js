@@ -328,8 +328,27 @@ function renderizarCartoes() {
             resultContainer.appendChild(cardDiv);
         });
     } else {
+        const resultContainer = document.querySelector('.result-container');
+
+        // Cria um elemento de contêiner para organizar o conteúdo
+        const messageContainer = document.createElement('div');
+        messageContainer.style.textAlign = 'center'; // Centraliza o conteúdo
+        messageContainer.style.marginTop = '20px'; // Adiciona espaço superior
+    
+        // Cria a mensagem
         const message = document.createElement('p');
-        message.textContent = 'Nenhum cartão recomendado disponível.';
-        document.querySelector('.result-container').appendChild(message);
+        message.innerHTML = '<strong>Sem cartões disponíveis. Primeiro, responda as perguntas!</strong>';
+        message.style.marginBottom = '15px'; // Adiciona espaço inferior
+        messageContainer.appendChild(message);
+    
+        // Cria o botão para voltar para a página inicial
+        const backButton = document.createElement('a');
+        backButton.textContent = 'Voltar para a página inicial';
+        backButton.href = 'index.html'; // Define o link para index.html
+        backButton.className = 'btn btn-primary'; // Estilo Bootstrap
+        messageContainer.appendChild(backButton);
+    
+        // Adiciona o contêiner ao resultContainer
+        resultContainer.appendChild(messageContainer);
     }
 }
